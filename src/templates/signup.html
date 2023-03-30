@@ -1,0 +1,13 @@
+{% block content %}
+<body>
+    <form class="site-signup"  method="post">
+        {% csrf_token %}
+        {% for feild in form %}
+            {{field.label}}
+            {{field}}
+            <p></p>
+        {% endfor %}
+        <input type="submit" value="Enter">
+    </form >
+</body>
+{% endblock %}
